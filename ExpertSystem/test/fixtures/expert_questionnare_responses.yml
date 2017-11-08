@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expert: one
+  ProblemRequest: one
+  response_data: MyText
+
+two:
+  expert: two
+  ProblemRequest: two
+  response_data: MyText
