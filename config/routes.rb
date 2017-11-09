@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-	resources :categories, only: [:index]
-  resources :problem_requests, only: [:index]
+  scope :api do
+    mount_devise_token_auth_for 'User', at: 'auth'
+  	resources :categories, only: [:index]
+    resources :problem_requests, only: [:index]
+  end
 end
