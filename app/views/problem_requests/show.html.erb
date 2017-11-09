@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @problem_request.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @problem_request.description %>
+</p>
+
+<p>
+  <strong>Expert responses</strong>
+  <ul>
+    <% @problem_request.expert_responses do |expert_response| %>
+      <li>
+        <%= expert_response.response_text %>
+      </li>
+    <% end %>
+  </ul>
+</p>
+
+
+<%= link_to 'Back', problem_requests_path %>
