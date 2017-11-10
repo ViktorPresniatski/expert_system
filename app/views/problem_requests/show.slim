@@ -18,9 +18,6 @@ p
       - @problem_request.expert_responses.each do |expert_response|
         li.list-group-item
           = render partial: 'expert_responses/response_item', :locals => {:expert_response => expert_response}
-          / = expert_response.response_text
-          / = expert_response.expert.email
-          / = localize(expert_response.created_at, :format => :long)
 
 - if current_user
   = render partial: 'request_form'
