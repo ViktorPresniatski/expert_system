@@ -1,13 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "alpaca.min.css";
+
+html {
+  font-size: 20px;
+}
 
 body {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .crop-long-text {
   max-width: 700px;
-  white-space:nowrap;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }

@@ -15,6 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require handlebars/dist/handlebars.min.js
+//= require alpaca
 
 
 //= require rails-ujs
