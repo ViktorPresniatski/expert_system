@@ -1,6 +1,6 @@
-h1 Problem Requests
+h2 Problem Requests
 
-table
+table.table
   thead
     tr
       th Name
@@ -11,6 +11,6 @@ table
       tr
         td
           = link_to problem_request.name, problem_request_url(problem_request)
-        td
+        td.crop-long-text
           = problem_request.description
 br
