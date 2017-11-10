@@ -1,8 +1,8 @@
 class CreateExpertResponses < ActiveRecord::Migration[5.1]
   def change
     create_table :expert_responses do |t|
-      t.references :expert, foreign_key: true
-      t.references :problem_request, foreign_key: true
+      t.references :expert, index: true
+      t.references :problem_request, index: true
       t.text :response_text
 
       t.timestamps

@@ -1,0 +1,16 @@
+p
+  strong Name: 
+  = @problem_request.name
+
+p
+  strong Description: 
+  = @problem_request.description
+
+p
+  strong Expert responses
+  ul
+    - @problem_request.expert_responses do |expert_response|
+      li
+        = expert_response.response_text
+
+= link_to 'Back', problem_requests_path
