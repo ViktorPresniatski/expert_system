@@ -58,9 +58,13 @@ end
 
 q1 = Questionnare.find_or_create_by(name: "БГУИР") do |t|
   t.data = '{"properties":{
-              "name":{
-                "type":"string",
-                "title":"Name"},
+              "names":[
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                }
+              ],
               "feedback":{
                 "type":"string",
                 "title":"Feedback"},
@@ -72,13 +76,88 @@ q1 = Questionnare.find_or_create_by(name: "БГУИР") do |t|
 end
 
 q2 = Questionnare.find_or_create_by(name: "МВД") do |t|
-  t.data = ""
+  t.data = '{"properties":{
+              "names":[
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                },
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                }
+              ],
+              "feedback":{
+                "type":"string",
+                "title":"Feedback"},
+              "ranking":{
+                "type":"string",
+                "title":"Ranking"}
+              }
+            }'
 end
 
 q3 = Questionnare.find_or_create_by(name: "ЖКХ") do |t|
-  t.data = ""
+  t.data = '{"properties":{
+              "names":[
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                },
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                },
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                }
+              ],
+              "feedback":{
+                "type":"string",
+                "title":"Feedback"},
+              "ranking":{
+                "type":"string",
+                "title":"Ranking"}
+              }
+            }'
 end
 
 q4 = Questionnare.find_or_create_by(name: "Министерство обороны") do |t|
-  t.data = ""
+  t.data = '{"properties":{
+              "names":[
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                },
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                },
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                },
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                }
+              ],
+              "feedback":{
+                "type":"string",
+                "title":"Feedback"},
+              "ranking":{
+                "type":"string",
+                "title":"Ranking"}
+              }
+            }'
 end
