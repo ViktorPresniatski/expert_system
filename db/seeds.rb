@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 q = Questionnare.find_or_create_by(name: "БГУИР")
 c = Category.find_or_create_by(name: "Other")
 a1 = User.find_or_create_by(id: 1) do |u|
@@ -62,3 +54,4 @@ rp3 = ExpertResponse.find_or_create_by(expert: a1) do |t|
   t.response_text = "Сомневаюсь что это будет удобно. Всё-таки иногда бывают ситуации когда в университет надо попасть и не-студенту. К тому же, думаю вахтёры не будут следить за тем чтобы никто не перепрыгивал турникеты"
   t.problem_request = pr2
 end
+
