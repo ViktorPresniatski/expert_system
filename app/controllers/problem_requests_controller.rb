@@ -4,6 +4,6 @@ class ProblemRequestsController < ApplicationController
   end
 
   def show
+    @problem_request = ProblemRequest.find(params[:id])
   end
-  
 end

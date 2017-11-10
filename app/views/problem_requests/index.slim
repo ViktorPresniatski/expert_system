@@ -1,0 +1,16 @@
+h1 Problem Requests
+
+table
+  thead
+    tr
+      th Name
+      th Description
+
+  tbody
+    - @problem_requests.each do |problem_request|
+      tr
+        td
+          = problem_request.name
+        td
+          = problem_request.description
+br
