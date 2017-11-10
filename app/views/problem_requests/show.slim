@@ -1,18 +1,22 @@
-p
-  strong Name: 
+h2
   = @problem_request.name
 
-p
-  strong Description: 
-  = @problem_request.description
+hr
 
 p
-  strong Expert responses
-  ul
-    - @problem_request.expert_responses.each do |expert_response|
-      li
-        = expert_response.response_text
-        = expert_response.expert.email
-        = localize(expert_response.created_at, :format => :long)
+  = @problem_request.description
+
+hr
+
+p
+  ul.list-group
+    li.list-group-item.active
+      strong Expert responses
+    
+      - @problem_request.expert_responses.each do |expert_response|
+        li.list-group-item
+          = expert_response.response_text
+          = expert_response.expert.email
+          = localize(expert_response.created_at, :format => :long)
 
 = link_to 'Back', problem_requests_path
