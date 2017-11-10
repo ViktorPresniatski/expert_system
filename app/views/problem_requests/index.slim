@@ -10,7 +10,7 @@ table
     - @problem_requests.each do |problem_request|
       tr
         td
-          = problem_request.name
+          = link_to problem_request.name, problem_request_url(problem_request)
         td
           = problem_request.description
 br
