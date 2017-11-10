@@ -1,4 +1,25 @@
-q = Questionnare.find_or_create_by(name: "БГУИР")
+q = Questionnare.find_or_create_by(title: "БГУИР") do |t|
+  t.description = "Вопросы к БГУИР"
+  t.data = '{"properties":[
+                {"name":{
+                    "type":"string",
+                    "title":"Name"
+                  }
+                },
+                {"feedback":{
+                    "type":"string",
+                    "title":"Feedback"
+                  }
+                },
+                {"ranking":{
+                    "type":"string",
+                    "title":"Ranking"
+                  }
+                }
+              ]
+            }'
+end
+
 c = Category.find_or_create_by(name: "Other")
 a1 = User.find_or_create_by(id: 1) do |u|
   u.email = "example@email.com"
@@ -56,7 +77,7 @@ rp3 = ExpertResponse.find_or_create_by(expert: a1) do |t|
 end
 
 
-q1 = Questionnare.find_or_create_by(name: "БГУИР") do |t|
+q1 = Questionnare.find_or_create_by(title: "БГУ") do |t|
   t.data = '{"properties":[
                 {"name":{
                     "type":"string",
@@ -77,7 +98,7 @@ q1 = Questionnare.find_or_create_by(name: "БГУИР") do |t|
             }'
 end
 
-q2 = Questionnare.find_or_create_by(name: "МВД") do |t|
+q2 = Questionnare.find_or_create_by(title: "МВД") do |t|
   t.data = '{"properties":[
                 {"name":{
                     "type":"string",
@@ -98,7 +119,7 @@ q2 = Questionnare.find_or_create_by(name: "МВД") do |t|
             }'
 end
 
-q3 = Questionnare.find_or_create_by(name: "ЖКХ") do |t|
+q3 = Questionnare.find_or_create_by(title: "ЖКХ") do |t|
   t.data = '{"properties":[
                 {"name":{
                     "type":"string",
@@ -119,7 +140,7 @@ q3 = Questionnare.find_or_create_by(name: "ЖКХ") do |t|
             }'
 end
 
-q4 = Questionnare.find_or_create_by(name: "Министерство обороны") do |t|
+q4 = Questionnare.find_or_create_by(title: "Министерство обороны") do |t|
   t.data = '{"properties":[
                 {"name":{
                     "type":"string",
