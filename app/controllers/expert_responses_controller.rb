@@ -1,0 +1,2 @@
+class ExpertResponsesController < ApplicationController
+end

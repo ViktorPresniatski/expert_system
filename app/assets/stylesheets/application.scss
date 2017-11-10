@@ -1,8 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
+.main-container {
   font-size: 2rem;
+  min-height: 100vh;
 }
 
 .crop-long-text {
