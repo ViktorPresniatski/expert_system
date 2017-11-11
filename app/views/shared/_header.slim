@@ -1,0 +1,28 @@
+nav.navbar.navbar-default
+  .container
+    .navbar-header
+      a.navbar-brand href="/"
+        | Экспертный клуб
+
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li
+          = link_to "Категории", categories_path
+        li
+          = link_to "Проблемы", problem_requests_path
+        li
+          = link_to "Контакты"
+        li
+          = link_to new_questionnare_path, class: "quest-link" do
+            i.glyphicon.glyphicon-plus
+            | Анкету
+
+      ul.nav.navbar-nav.navbar-right
+        li
+          span.navbar-brand.glyphicon.glyphicon-user
+        li
+          = link_to "Логин", new_user_session_path
+        li
+          = link_to "Выйти", destroy_user_session_path, :method => 'delete'
+        li
+          = link_to "Регистрация", new_user_registration_path

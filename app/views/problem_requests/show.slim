@@ -10,6 +10,8 @@ p
 
 hr
 
+.quest data-id=@problem_request.questionnare.id
+
 p
   ul.list-group
     li.list-group-item.active
@@ -17,7 +19,9 @@ p
 
       - @problem_request.expert_responses.each do |expert_response|
         li.list-group-item
-          = render partial: 'expert_responses/response_item', :locals => {:expert_response => expert_response}
+          div = expert_response.response_text
+          div = expert_response.expert.email
+          div = localize(expert_response.created_at, :format => :long)
 
 - if flash[:expert_response_error_message]
   p.text-danger

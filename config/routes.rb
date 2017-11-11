@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :categories, only: [:index]
-  resources :problem_requests, only: [:index, :show] do
-    post 'add_response', to: 'problem_requests#add_response'
-  end
+  resources :problem_requests, only: [:index, :show]
+  resources :questionnares, only: [:new, :create, :show]
 end
