@@ -1,10 +1,12 @@
 h2
   | Создать Анкету
 
-form accept-charset="UTF-8" id="quest-form"
-  label for="title" Название:
-  input id="title" name="title" type="text"
-  label for="description" Описание:
-  input id="description" name="description" type="text"
+form.form-inline accept-charset="UTF-8" id="quest-form"
+  .form-group  
+    label for="title" Название:
+    input.form-control id="title" name="title" type="text"
+  .form-group
+    label for="description" Описание:
+    input.form-control id="description" name="description" type="text"
 
 .quest-create
