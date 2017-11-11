@@ -1,0 +1,4 @@
+= form_for :expert_response, :url => problem_request_add_response_path(@problem_request), :method => :post do |f|
+  = f.text_area :response_text, class: "form-control"
+  div.actions
+    = f.submit class: "btn btn-primary"

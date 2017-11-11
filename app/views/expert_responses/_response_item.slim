@@ -1,0 +1,6 @@
+p.small
+  = expert_response.expert.email
+p
+  = expert_response.response_text
+div.small.text-muted.text-right
+  = localize(expert_response.created_at, :format => :long)
