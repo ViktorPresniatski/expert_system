@@ -2,8 +2,7 @@
   "name": "expert_system",
   "private": true,
   "dependencies": {
-    "alpaca": "^1.5.23",
-    "handlebars": "^4.0.11"
+    "formBuilder": "^2.9.8"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",

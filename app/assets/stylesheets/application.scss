@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "alpaca.min.css";
+@import "jquery.ui.all";
 
 html {
   font-size: 20px;
@@ -15,4 +15,13 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.quest-link i {
+  font-size: 18px;
+  margin-right: 3px;
+}
+
+.quest .cb-wrap {
+  display: none;
 }

@@ -4,8 +4,7 @@ class QuestionnaresController < ApplicationController
   end
 
   def create
-    #TODO parsing from params
-    @questionnary = Questionnare.new(questionnary_params)
+    @questionnary = Questionnare.new(form_data: params[formData])
     if @questionnary.save
       redirect_to problem_requests_path
     else
@@ -17,9 +16,4 @@ class QuestionnaresController < ApplicationController
     @questionnary = Questionnare.find(params[:id])
   end
 
-  private
-
-  def questionnary_params
-    params.require(:questionnary)
-  end
 end

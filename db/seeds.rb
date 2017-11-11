@@ -1,23 +1,26 @@
 q = Questionnare.find_or_create_by(title: "БГУИР") do |t|
   t.description = "Вопросы к БГУИР"
-  t.data = '{"properties":[
-                {"name":{
-                    "type":"string",
-                    "title":"Name"
-                  }
-                },
-                {"feedback":{
-                    "type":"string",
-                    "title":"Feedback"
-                  }
-                },
-                {"ranking":{
-                    "type":"string",
-                    "title":"Ranking"
-                  }
-                }
-              ]
-            }'
+  t.data = '[
+              {
+                "type": "header",
+                "subtype": "h3",
+                "label": "БГУИР"
+              },
+              {
+                "type": "text",
+                "label": "Факультет",
+                "className": "form-control",
+                "name": "text-1510395666108",
+                "subtype": "text"
+              },
+              {
+                "type": "text",
+                "label": "Кафедра",
+                "className": "form-control",
+                "name": "text-1510395668179",
+                "subtype": "text"
+              }
+            ]'
 end
 
 c = Category.find_or_create_by(name: "Other")
@@ -78,85 +81,101 @@ end
 
 
 q1 = Questionnare.find_or_create_by(title: "БГУ") do |t|
-  t.data = '{"properties":[
-                {"name":{
-                    "type":"string",
-                    "title":"Name"
-                  }
-                },
-                {"feedback":{
-                    "type":"string",
-                    "title":"Feedback"
-                  }
-                },
-                {"ranking":{
-                    "type":"string",
-                    "title":"Ranking"
-                  }
-                }
-              ]
-            }'
+  t.description = "Вопросы к БГУ"
+  t.data = '[
+              {
+                "type": "header",
+                "subtype": "h3",
+                "label": "БГУ"
+              },
+              {
+                "type": "text",
+                "label": "Факультет",
+                "className": "form-control",
+                "name": "text-1510395666108",
+                "subtype": "text"
+              },
+              {
+                "type": "text",
+                "label": "Кафедра",
+                "className": "form-control",
+                "name": "text-1510395668179",
+                "subtype": "text"
+              }
+            ]'
 end
 
 q2 = Questionnare.find_or_create_by(title: "МВД") do |t|
-  t.data = '{"properties":[
-                {"name":{
-                    "type":"string",
-                    "title":"Name"
-                  }
-                },
-                {"feedback":{
-                    "type":"string",
-                    "title":"Feedback"
-                  }
-                },
-                {"ranking":{
-                    "type":"string",
-                    "title":"Ranking"
-                  }
-                }
-              ]
-            }'
+  t.description = "Предложение к МВД"
+  t.data = '[
+              {
+                "type": "header",
+                "subtype": "h3",
+                "label": "МВД"
+              },
+              {
+                "type": "text",
+                "label": "Подразделение",
+                "className": "form-control",
+                "name": "text-1510395666108",
+                "subtype": "text"
+              },
+              {
+                "type": "text",
+                "label": "Звание",
+                "className": "form-control",
+                "name": "text-1510395668179",
+                "subtype": "text"
+              }
+            ]'
 end
 
 q3 = Questionnare.find_or_create_by(title: "ЖКХ") do |t|
-  t.data = '{"properties":[
-                {"name":{
-                    "type":"string",
-                    "title":"Name"
-                  }
-                },
-                {"feedback":{
-                    "type":"string",
-                    "title":"Feedback"
-                  }
-                },
-                {"ranking":{
-                    "type":"string",
-                    "title":"Ranking"
-                  }
-                }
-              ]
-            }'
+  t.description = "Предложение к управлению ЖКХ"
+  t.data = '[
+              {
+                "type": "header",
+                "subtype": "h3",
+                "label": "ЖКХ"
+              },
+              {
+                "type": "text",
+                "label": "Район",
+                "className": "form-control",
+                "name": "text-1510395666108",
+                "subtype": "text"
+              },
+              {
+                "type": "text",
+                "label": "Улица",
+                "className": "form-control",
+                "name": "text-1510395668179",
+                "subtype": "text"
+              }
+            ]'
 end
 
 q4 = Questionnare.find_or_create_by(title: "Министерство обороны") do |t|
-  t.data = '{"properties":[
-                {"name":{
-                    "type":"string",
-                    "title":"Name"
-                  }
-                },
-                {"feedback":{
-                    "type":"string",
-                    "title":"Feedback"
-                  }
-                },
-                {"ranking":{
-                    "type":"string",
-                    "title":"Ranking"
-                  }
-                }
-              ]
-            }'
+  t.description = "Вопросы к МО"
+  t.data = '[
+              {
+                "type": "header",
+                "subtype": "h3",
+                "label": "Министерство обороны"
+              },
+              {
+                "type": "text",
+                "label": "Округ",
+                "className": "form-control",
+                "name": "text-1510395666108",
+                "subtype": "text"
+              },
+              {
+                "type": "text",
+                "label": "Военная часть",
+                "className": "form-control",
+                "name": "text-1510395668179",
+                "subtype": "text"
+              }
+            ]'
 end
