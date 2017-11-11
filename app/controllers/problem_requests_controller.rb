@@ -12,7 +12,11 @@ class ProblemRequestsController < ApplicationController
   def add_response
     @problem_request = ProblemRequest.find(params[:problem_request_id])
     @expert_response = @problem_request.add_response(expert_response_params, current_user)
-    redirect_to @problem_request
+    if @expert_response.valid?
+      redirect_to @problem_request
+    else
+      render 'expert_responses/show'
+    end
   end
 
   private
