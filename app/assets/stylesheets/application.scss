@@ -1,14 +1,45 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "jquery.ui.all";
 
+html {
+  font-size: 20px;
+}
+
+<<<<<<< HEAD
 .main-container {
   font-size: 2rem;
   min-height: 100vh;
+=======
+body {
+  font-size: 1rem;
+}
+
+.container {
+  margin-bottom: 50px; 
+>>>>>>> 1fd2651c299da77581167eb68b5c358d47134085
 }
 
 .crop-long-text {
   max-width: 700px;
-  white-space:nowrap;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.quest-link i {
+  font-size: 18px;
+  margin-right: 3px;
+}
+
+.quest .cb-wrap {
+  display: none;
+}
+
+.quest-create {
+  overflow: scroll;
+}
+
+.subcategory {
+  padding-left: 50px;
 }

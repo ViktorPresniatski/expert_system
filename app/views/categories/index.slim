@@ -1,0 +1,6 @@
+- for category in @categories do 
+  - if category.parent.present?
+    p.subcategory
+      = category.name
+  - else
+    p = category.name
