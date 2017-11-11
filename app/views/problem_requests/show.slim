@@ -19,6 +19,9 @@ p
         li.list-group-item
           = render partial: 'expert_responses/response_item', :locals => {:expert_response => expert_response}
 
+- if flash[:expert_response_error_message]
+  p.text-danger
+    = flash[:expert_response_error_message]
 
 - if current_user
   = render partial: 'request_form'

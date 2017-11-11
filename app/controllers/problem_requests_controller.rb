@@ -12,11 +12,14 @@ class ProblemRequestsController < ApplicationController
   def add_response
     @problem_request = ProblemRequest.find(params[:problem_request_id])
     @expert_response = @problem_request.add_response(expert_response_params, current_user)
-    if @expert_response.valid?
-      redirect_to @problem_request
-    else
-      render 'expert_responses/show'
+    if !@expert_response.valid?
+      expert_response_error_message = ''
+      @expert_response.errors.full_messages.each do |error|
+        expert_response_error_message += "#{error[:message]}\n"
+      end
+      flash[:expert_response_error_message] = expert_response_error_message
     end
+    redirect_to @problem_request
   end
 
   private
