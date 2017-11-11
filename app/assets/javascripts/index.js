@@ -36,9 +36,15 @@
 
       case event.target.URL.includes('questionnares/new'):
         const formBuilder = $('.quest-create').formBuilder(defaults);
-
+        
         $('.quest-create').on('click', '.save-template', () => {
+          var questForm = $('#quest-form').serializeArray().reduce(function(obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+          }, {});
           $.post('/questionnares', {
+            title: questForm.title,
+            description: questForm.description, 
             formData: formBuilder.actions.getData('json')
           });
         });

@@ -10,6 +10,10 @@ body {
   font-size: 1rem;
 }
 
+.container {
+  margin-bottom: 50px; 
+}
+
 .crop-long-text {
   max-width: 700px;
   white-space: nowrap;
@@ -24,4 +28,12 @@ body {
 
 .quest .cb-wrap {
   display: none;
+}
+
+.quest-create {
+  overflow: scroll;
+}
+
+.subcategory {
+  padding-left: 50px;
 }
